@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="جدول المواعيد - SpeakNest" name="description" />
+    <!-- Bootstrap RTL CSS (MANDATORY) -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <!-- Font Awesome (v6 PRO used in project) -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles (main.css contains design variables) -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>جدول المواعيد | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR (RIGHT SIDE) ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>الرئيسية</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>جدول المواعيد</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>اعدادات مواعيد العمل</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes.html" class="active">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>الدروس</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>إدارة الإشتراكات</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>محفظة المستحقات</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>قائمة التقييمات</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>من نحن</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>الشروط والأحكام</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>سياسة الخصوصية</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>الأسئلة الشائعة</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصل بنا</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">رصيد المحفظة الحالي</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="class-details-en.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">EN</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">أ/ خالد محمد</span>
+                        <img src="images/teacher-avatar.png" alt="أ/ خالد محمد" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile.html">
+                                <i class="fa-solid fa-user"></i>
+                                الملف الشخصي
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password.html">
+                                <i class="fa-solid fa-lock"></i>
+                                تعديل كلمة المرور
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                تسجيل الخروج
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+
+
+            <!-- ---- Your Classes Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">تفاصيل الحصة</div>
+
+                <div class="lesson-card-item">
+                    <div class="lesson-details-grid">
+                        <div class="lesson-details-col">
+                            <div class="detail-item">
+                                <span class="label">رقم الدرس</span>
+                                <span class="value">#123</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">اسم الطالب</span>
+                                <span class="value">برديس وليد</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">مدة الدرس</span>
+                                <span class="value">30 دقيقة</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-sep-v"></div>
+
+                        <div class="lesson-details-col">
+                            <div class="detail-item">
+                                <span class="label">التاريخ</span>
+                                <span class="value">19/3/2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">الموعد</span>
+                                <span class="value fz20">9:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">الحالة</span>
+                                <span class="value">منتهية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="red my-5">
+
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="curriculum-banner mb-4">
+                            <div class="d-flex justify-content-between align-items-center w-100 p-3 flex-wrap gap-3">
+                                <div class="banner-text">المنهج المحدد للدراسة</div>
+                                <a href="#" class="btn-homework">
+                                    رابط الواجب المنزلي المطلوب
+                                    <i class="fa-solid fa-book-open ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="btn btn-blue-outlined btn-action-lg collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#reportCollapse">الإبلاغ عن مشكلة</button>
+                    <button class="btn btn-blue-outlined btn-action-lg collapsed">بدء الدرس</button>
+                    <button class="btn btn-blue-outlined btn-action-lg collapsed " data-bs-toggle="modal"
+                        data-bs-target="#endLessonModal">انهاء الدرس</button>
+                </div>
+
+                <div class="collapse mt-4" id="reportCollapse">
+                    <div class="data-card p-4">
+                        <h5 class="text-center mb-4 fw700 mb-4">نص المشكلة</h5>
+                        <div class="form-group mb-4">
+                            <div class="input-wrapper-custom">
+                                <textarea class="form-control" rows="4" placeholder="أخبرنا عن السبب..."></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-blue" style="min-width: 150px;">ابلاغ</button>
+                            <button class="btn btn-orange-outlined " data-bs-toggle="collapse"
+                                data-bs-target="#reportCollapse">الغاء العملية</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- End Lesson Modal -->
+            <div class="modal fade" id="endLessonModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 p-3" style="border-radius: 24px;">
+                        <div class="modal-body">
+                            <h4 class="text-center mb-4 fw700">انهاء الدرس</h4>
+                            <div class="form-group mb-3">
+                                <div class="input-wrapper-custom">
+                                    <input type="text" class="form-control" placeholder="نص الملاحظات ...">
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <div class="input-wrapper-custom">
+                                    <input type="text" class="form-control" placeholder="رابط الواجب المنزلي المطلوب">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn btn-blue px-md-5">تأكيد الإنتهاء</button>
+                                <button class="btn btn-orange-outlined" data-bs-dismiss="modal">الغاء العملية</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

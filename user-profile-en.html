@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="User Profile - SpeakNest" name="description" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>User Profile | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index-en.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index-en.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-en.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings-en.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Schedule Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes-en.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Classes</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions-en.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>Manage Subscriptions</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet-en.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews-en.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>Reviews List</span>
+                </a>
+            </li>
+            <li>
+                <a href="about-en.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms-en.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>Terms & Conditions</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy-en.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs-en.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>FAQs</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact-en.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet-en.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">Current Wallet Balance</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications-en.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="user-profile.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">AR</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">Mr. Khaled Mohamed</span>
+                        <img src="images/teacher-avatar.png" alt="Mr. Khaled Mohamed" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile-en.html" class="active">
+                                <i class="fa-solid fa-user"></i>
+                                User Profile
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password-en.html">
+                                <i class="fa-solid fa-lock"></i>
+                                Change Password
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout-en.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="welcome-card bg-blue mb-5 d-flex justify-content-between align-items-center">
+                        <div class="user-welcome">Welcome, Mr. Khaled Mohamed</div>
+                        <div class="user-sidebar-avatar">
+                            <img src="images/teacher-avatar.png" alt="User Avatar" />
+                            <div class="edit-avatar-btn">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-title-dash mb-4">Profile Details</div>
+            <div class="profile-form-grid">
+                <!-- Email -->
+                <div class="form-group-custom">
+                    <label>Email Address</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-envelope"></i></div>
+                        <input class="form-control" type="email" value="example@gmail.com" />
+                    </div>
+                </div>
+                <!-- Mobile -->
+                <div class="form-group-custom">
+                    <label>Mobile Number</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-phone-flip"></i></div>
+                        <input class="form-control" type="text" value="010 0000 0000" />
+                        <div class="phone-prefix">
+                            <img alt="EG" src="https://flagcdn.com/w20/eg.png" />
+                            <span>+20</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Specialization -->
+                <div class="form-group-custom">
+                    <label>Specialization</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-graduation-cap"></i></div>
+                        <select class="form-select">
+                            <option selected="">English Language</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Gender -->
+                <div class="form-group-custom">
+                    <label>Gender</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-mars-and-venus"></i></div>
+                        <select class="form-select">
+                            <option selected="">Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Country -->
+                <div class="form-group-custom">
+                    <label>Country</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-location-dot"></i></div>
+                        <select class="form-select">
+                            <option selected="">Select Country...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- City -->
+                <div class="form-group-custom">
+                    <label>City</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-city"></i></div>
+                        <select class="form-select">
+                            <option selected="">Select City...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- About You -->
+                <div class="form-group-custom grid-column-2">
+                    <label>About You</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="Write something about yourself..." />
+                    </div>
+                </div>
+            </div>
+
+            <hr class="red my-5">
+
+            <!-- Bank Account Section -->
+            <div class="section-title-dash mb-4">Bank Account Details</div>
+            <div class="profile-form-grid">
+                <!-- Bank Name -->
+                <div class="form-group-custom">
+                    <label>Bank Name</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="Enter bank name" />
+                    </div>
+                </div>
+                <!-- Beneficiary Name -->
+                <div class="form-group-custom">
+                    <label>Beneficiary Name</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="Enter name" />
+                    </div>
+                </div>
+                <!-- Account Number -->
+                <div class="form-group-custom">
+                    <label>Account Number</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="Enter number" />
+                    </div>
+                </div>
+                <!-- IBAN Number -->
+                <div class="form-group-custom">
+                    <label>IBAN Number</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="Enter IBAN" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-save-wrap mt-5">
+                <button class="btn btn-blue px-5 py-3 fz18">Save Changes</button>
+            </div>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

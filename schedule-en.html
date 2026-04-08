@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Schedule - SpeakNest" name="description" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>Schedule | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index-en.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index-en.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-en.html" class="active">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings-en.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Schedule Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes-en.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Classes</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions-en.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>Manage Subscriptions</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet-en.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews-en.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>Reviews List</span>
+                </a>
+            </li>
+            <li>
+                <a href="about-en.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms-en.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>Terms & Conditions</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy-en.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs-en.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>FAQs</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact-en.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet-en.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">Current Wallet Balance</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications-en.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="schedule.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">AR</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">Mr. Khaled Mohamed</span>
+                        <img src="images/teacher-avatar.png" alt="Mr. Khaled Mohamed" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile-en.html">
+                                <i class="fa-solid fa-user"></i>
+                                User Profile
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password-en.html">
+                                <i class="fa-solid fa-lock"></i>
+                                Change Password
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout-en.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+            <!-- ---- Top Alert Banner ---- -->
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="alert-banner-custom">
+                        <div class="text">Your next class is in 45 minutes</div>
+                        <button class="btn btn-glass">Enter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---- Appointments Schedule Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">Current Appointments Schedule</div>
+
+                <div class="calendar-card">
+                    <div class="calendar-header-flex">
+                        <div class="calendar-nav-controls">
+                            <div class="calendar-prev calendar-nav-btn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="calendar-title">9 - 15 March, 2026</div>
+                            <div class="calendar-next calendar-nav-btn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="view-toggle-pill">
+                            <button class="view-toggle-btn active">Weekly</button>
+                            <button class="view-toggle-btn">Monthly</button>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Grid -->
+                    <div class="calendar-grid">
+                        <div class="day-card">
+                            <span class="day-name">Sat</span>
+                        </div>
+                        <div class="day-card">
+                            <span class="day-name">Sun</span>
+                        </div>
+                        <div class="day-card">
+                            <span class="day-name">Mon</span>
+                        </div>
+                        <div class="day-card status-unavailable">
+                            <span class="day-name">Tue</span>
+                        </div>
+                        <div class="day-card">
+                            <span class="day-name">Wed</span>
+                        </div>
+                        <div class="day-card status-booked">
+                            <span class="day-name">Thu</span>
+                            <span class="appt-id">#123 <i class="fa-solid fa-user-group fz12"></i></span>
+                            <span class="appt-time">9:00 <i class="fa-solid fa-clock fz12"></i></span>
+                        </div>
+                        <div class="day-card">
+                            <span class="day-name">Fri</span>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <span class="legend-circle available"></span>
+                            <span>Available</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-circle booked"></span>
+                            <span>Booked</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-circle unavailable"></span>
+                            <span>Unavailable</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

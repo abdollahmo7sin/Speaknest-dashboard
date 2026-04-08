@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="جدول المواعيد - SpeakNest" name="description" />
+    <!-- Bootstrap RTL CSS (MANDATORY) -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <!-- Font Awesome (v6 PRO used in project) -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles (main.css contains design variables) -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>تفاصيل الإشتراك | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR (RIGHT SIDE) ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>الرئيسية</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>جدول المواعيد</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>اعدادات مواعيد العمل</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>الدروس</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions.html" class="active">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>إدارة الإشتراكات</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>محفظة المستحقات</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>قائمة التقييمات</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>من نحن</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>الشروط والأحكام</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>سياسة الخصوصية</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>الأسئلة الشائعة</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصل بنا</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">رصيد المحفظة الحالي</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal fz14"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="subscription-details-en.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">EN</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">أ/ خالد محمد</span>
+                        <img src="images/teacher-avatar.png" alt="أ/ خالد محمد" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile.html">
+                                <i class="fa-solid fa-user"></i>
+                                الملف الشخصي
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password.html">
+                                <i class="fa-solid fa-lock"></i>
+                                تعديل كلمة المرور
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                تسجيل الخروج
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+
+
+            <!-- ---- Subscriptions Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">تفاصيل الإشتراك</div>
+
+                <!-- ---- Subscription Details Card ---- -->
+                <div class="lesson-card-item">
+                    <div class="lesson-card-grid">
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">رقم الإشتراك</span>
+                                <span class="value">#123</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">تاريخ و وقت الإشتراك</span>
+                                <span class="value">19/3/2026 - 9:00</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">التخصص</span>
+                                <span class="value">لغة انجليزية</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">اسم الباقة</span>
+                                <span class="value">اسم الباقة</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">مدة الإشتراك</span>
+                                <span class="value">اسبوع واحد</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">الحالة</span>
+                                <span class="value">منتهية</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-sep-v"></div>
+
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">عدد الدروس</span>
+                                <span class="value">15</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">عدد الدروس المتبقية</span>
+                                <span class="value">15</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">مدة الدرس</span>
+                                <span class="value">30 دقيقة</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">تاريخ بداية الإشتراك</span>
+                                <span class="value">19/3/2026</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">تاريخ انتهاء الإشتراك</span>
+                                <span class="value">19/3/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ---- Action Buttons ---- -->
+                <div class="d-flex flex-wrap gap-3 mb-5">
+                    <button class="btn btn-blue-outlined py-3 px-5 flex-grow-1" data-bs-toggle="modal"
+                        data-bs-target="#selectCurriculumModal">إختيار المنهج التعليمي</button>
+
+                    <div
+                        class="curriculum-banner flex-grow-1 d-flex align-items-center justify-content-between p-3 px-4">
+                        <span class="banner-text">المنهج المحدد للدراسة</span>
+                        <a href="#" class="btn-homework copy-link-btn" data-link="https://example.com/homework">
+                            <i class="fa-solid fa-book-open me-2"></i>
+                            رابط الواجب المنزلي المطلوب
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lesson-sep-h opacity-25 mb-5"></div>
+
+                <!-- ---- Lesson Log Section ---- -->
+                <section class="mb-5">
+                    <div class="section-title-dash">سجل الدروس</div>
+
+                    <div class="lessons-log-list">
+                        <!-- Lesson Card 1 -->
+                        <div class="lesson-card-item">
+                            <div class="lesson-card-grid">
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row">
+                                        <span class="label">مسلسل</span>
+                                        <span class="value">1</span>
+                                    </div>
+                                    <div class="lesson-item-row">
+                                        <span class="label">رقم الدرس</span>
+                                        <span class="value">#123</span>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-sep-v"></div>
+
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row">
+                                        <span class="label">التاريخ</span>
+                                        <span class="value">19/3/2026</span>
+                                    </div>
+                                    <div class="lesson-item-row">
+                                        <span class="label">الموعد</span>
+                                        <span class="value">9:00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-sep-h"></div>
+
+                            <div class="lesson-card-footer">
+                                <a href="class-details.html" class="footer-arrow">
+                                    <span class="footer-label">تفاصيل الدرس</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Lesson Card 2 -->
+                        <div class="lesson-card-item">
+                            <div class="lesson-card-grid">
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row">
+                                        <span class="label">مسلسل</span>
+                                        <span class="value">1</span>
+                                    </div>
+                                    <div class="lesson-item-row">
+                                        <span class="label">رقم الدرس</span>
+                                        <span class="value">#123</span>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-sep-v"></div>
+
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row">
+                                        <span class="label">التاريخ</span>
+                                        <span class="value">19/3/2026</span>
+                                    </div>
+                                    <div class="lesson-item-row">
+                                        <span class="label">الموعد</span>
+                                        <span class="value">9:00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-sep-h"></div>
+
+                            <div class="lesson-card-footer">
+                                <a href="class-details.html" class="footer-arrow">
+                                    <span class="footer-label">تفاصيل الدرس</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Select Curriculum Modal -->
+    <div class="modal fade" id="selectCurriculumModal" tabindex="-1" aria-labelledby="selectCurriculumModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content p-4 modal-rounded-24">
+                <div class="modal-header border-0 justify-content-center p-0 mb-4">
+                    <h5 class="modal-title fw700 fz24 text-color" id="selectCurriculumModalLabel">إختيار المنهج التعليمي
+                    </h5>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="mb-4">
+                        <input type="text" class="form-control py-3 input-rounded-12-centered" placeholder="اسم المنهج">
+                    </div>
+
+                    <div class="curriculum-banner d-flex align-items-center justify-content-between p-3 px-4 mb-4">
+                        <span class="banner-text">محتوي المنهج ( PDF )</span>
+                        <a href="#" class="btn-homework copy-link-btn" data-link="https://example.com/homework">
+                            <i class="fa-solid fa-book-open me-2"></i>
+                            رابط الواجب المنزلي المطلوب
+                        </a>
+                    </div>
+
+                    <div class="d-flex gap-3 mt-4 justify-content-center">
+                        <button type="button" class="btn btn-blue ">إختيار</button>
+                        <button type="button" class="btn btn-orange-outlined" data-bs-dismiss="modal">الغاء
+                            العملية</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

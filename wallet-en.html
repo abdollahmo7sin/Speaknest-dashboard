@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Wallet - SpeakNest" name="description" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>Wallet | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index-en.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index-en.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-en.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings-en.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Schedule Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes-en.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Classes</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions-en.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>Manage Subscriptions</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet-en.html" class="active">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews-en.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>Reviews List</span>
+                </a>
+            </li>
+            <li>
+                <a href="about-en.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms-en.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>Terms & Conditions</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy-en.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs-en.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>FAQs</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact-en.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet-en.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">Current Wallet Balance</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications-en.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="wallet.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">AR</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">Mr. Khaled Mohamed</span>
+                        <img src="images/teacher-avatar.png" alt="Mr. Khaled Mohamed" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile-en.html">
+                                <i class="fa-solid fa-user"></i>
+                                User Profile
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password-en.html">
+                                <i class="fa-solid fa-lock"></i>
+                                Change Password
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout-en.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+            <!-- Wallet Balance Summary -->
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="wallet-summary-container mb-5">
+                        <div class="main-balance-card d-flex justify-content-between align-items-center mb-4">
+                            <div class="balance-label">Current Balance</div>
+                            <div class="balance-value">
+                                100 <i class="icon-saudi_riyal"></i>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="sub-balance-card">
+                                    <div class="label">Total Earnings</div>
+                                    <div class="value fz24 fw700 text-blue">100</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="sub-balance-card">
+                                    <div class="label">Total Transferred</div>
+                                    <div class="value fz24 fw700 text-blue">100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-sep-h opacity-25 mb-5"></div>
+
+            <!-- Tabs Section -->
+            <ul class="nav nav-pills wallet-tabs justify-content-center mb-5" id="walletTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="additions-tab" data-bs-toggle="pill" data-bs-target="#additions"
+                        type="button" role="tab">Additions Log</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="withdrawals-tab" data-bs-toggle="pill" data-bs-target="#withdrawals"
+                        type="button" role="tab">Withdrawals Log</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="walletTabsContent">
+                <!-- Additions Tab -->
+                <div class="tab-pane fade show active" id="additions" role="tabpanel">
+                    <div class="section-header-row mb-4">
+                        <div class="section-title-dash mb-0">Additions Log</div>
+                        <div class="filter-item has-select ms-auto" style="max-width: 300px;">
+                            <select class="form-select">
+                                <option selected disabled>Time Period: ( From - To )</option>
+                                <option value="">19/3/2026 - 20/3/2026</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wallet-logs-list">
+                        <!-- Addition Card 1 -->
+                        <div class="lesson-card-item">
+                            <div class="lesson-card-grid">
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">S.N</span>
+                                        <span class="value">1</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">ID</span>
+                                        <span class="value">#123</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Date & Time</span>
+                                        <span class="value">19/3/2026 - 9:00</span>
+                                    </div>
+                                </div>
+                                <div class="lesson-sep-v"></div>
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Student Name</span>
+                                        <span class="value">Pardis Walid</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Lesson Number</span>
+                                        <span class="value">#123</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Class Value</span>
+                                        <span class="value">100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-custom mt-5">
+                        <a href="#" class="page-btn prev"><i class="fa-solid fa-chevron-left"></i></a>
+                        <a href="#" class="page-btn">01</a>
+                        <a href="#" class="page-btn active">02</a>
+                        <a href="#" class="page-btn">03</a>
+                        <a href="#" class="page-btn next"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Withdrawals Tab -->
+                <div class="tab-pane fade" id="withdrawals" role="tabpanel">
+                    <div class="section-header-row mb-4">
+                        <div class="section-title-dash mb-0">Withdrawals Log</div>
+                        <div class="filter-item has-select ms-auto" style="max-width: 300px;">
+                            <select class="form-select">
+                                <option selected disabled>Time Period: ( From - To )</option>
+                                <option value="">19/3/2026 - 20/3/2026</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wallet-logs-list">
+                        <!-- Withdrawal Card 1 -->
+                        <div class="lesson-card-item">
+                            <div class="lesson-card-grid">
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">S.N</span>
+                                        <span class="value">1</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">ID</span>
+                                        <span class="value">#123</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Date</span>
+                                        <span class="value">19/3/2026</span>
+                                    </div>
+                                </div>
+                                <div class="lesson-sep-v"></div>
+                                <div class="lesson-card-col">
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Time</span>
+                                        <span class="value">9:00</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Transferred Amount</span>
+                                        <span class="value">100</span>
+                                    </div>
+                                    <div class="lesson-item-row border-0">
+                                        <span class="label">Account Details</span>
+                                        <span class="value">100</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lesson-sep-h opacity-25"></div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="label fz14 text-muted">Transfer Image</span>
+                                <a href="#" class="text-red fz14 fw700 d-flex align-items-center gap-2">
+                                    Preview <i class="fa-solid fa-image"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-custom mt-5">
+                        <a href="#" class="page-btn prev"><i class="fa-solid fa-chevron-left"></i></a>
+                        <a href="#" class="page-btn">01</a>
+                        <a href="#" class="page-btn active">02</a>
+                        <a href="#" class="page-btn">03</a>
+                        <a href="#" class="page-btn next"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

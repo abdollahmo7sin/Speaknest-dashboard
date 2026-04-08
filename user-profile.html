@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="الأسئلة الشائعة - SpeakNest" name="description" />
+    <!-- Bootstrap RTL CSS (MANDATORY) -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <!-- Font Awesome (v6 PRO used in project) -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles (main.css contains design variables) -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>الملف الشخصي | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR (RIGHT SIDE) ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>الرئيسية</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>جدول المواعيد</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>اعدادات مواعيد العمل</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>الدروس</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>إدارة الإشتراكات</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>محفظة المستحقات</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>قائمة التقييمات</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>من نحن</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>الشروط والأحكام</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>سياسة الخصوصية</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>الأسئلة الشائعة</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>اتصل بنا</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">رصيد المحفظة الحالي</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal fz14"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="user-profile-en.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">EN</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">أ/ خالد محمد</span>
+                        <img src="images/teacher-avatar.png" alt="أ/ خالد محمد" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile.html" class="active">
+                                <i class="fa-solid fa-user"></i>
+                                الملف الشخصي
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password.html">
+                                <i class="fa-solid fa-lock"></i>
+                                تعديل كلمة المرور
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                تسجيل الخروج
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="welcome-card bg-blue mb-5 d-flex justify-content-between align-items-center">
+                        <div class="user-welcome">مرحباً بك يا أ/ خالد محمد</div>
+                        <div class="user-sidebar-avatar ">
+                            <img src="images/teacher-avatar.png" alt="" />
+                            <div class="edit-avatar-btn">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-title-dash mb-4">بيانات الملف الشخصي</div>
+            <div class="profile-form-grid">
+                <!-- Email -->
+                <div class="form-group-custom">
+                    <label>البريد الالكتروني</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-envelope"></i></div>
+                        <input class="form-control" type="email" value="example@gmail.com" />
+                    </div>
+                </div>
+                <!-- Mobile -->
+                <div class="form-group-custom">
+                    <label>رقم الجوال</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-phone-flip"></i></div>
+                        
+                        <input class="form-control" type="text" value="010 0000 0000" />
+                        <div class="phone-prefix">
+                            <img alt="EG" src="https://flagcdn.com/w20/eg.png" />
+                            <span>+20</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Specialization -->
+                <div class="form-group-custom">
+                    <label>التخصص</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-graduation-cap"></i></div>
+                        <select class="form-select">
+                            <option selected="">لغة انجليزية</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Gender -->
+                <div class="form-group-custom">
+                    <label>النوع</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-mars-and-venus"></i></div>
+                        <select class="form-select">
+                            <option selected="">ذكر</option>
+                            <option>أنثي</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Country -->
+                <div class="form-group-custom">
+                    <label>الدولة</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-location-dot"></i></div>
+                        <select class="form-select">
+                            <option selected="">دولة ...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- City -->
+                <div class="form-group-custom">
+                    <label>المدينة</label>
+                    <div class="input-wrapper-custom">
+                        <div class="input-icon"><i class="fa-light fa-city"></i></div>
+                        <select class="form-select">
+                            <option selected="">مدينة ...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- About You -->
+                <div class="form-group-custom grid-column-2">
+                    <label>نبذة عنك</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="أكتب ما تريده ..." />
+                    </div>
+                </div>
+            </div>
+
+            <hr class="red my-5">
+
+            <!-- Bank Account Section -->
+            <div class="section-title-dash mb-4">بيانات الحساب البنكي</div>
+            <div class="profile-form-grid">
+                <!-- Bank Name -->
+                <div class="form-group-custom">
+                    <label>اسم البنك</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="الاسم" />
+                    </div>
+                </div>
+                <!-- Beneficiary Name -->
+                <div class="form-group-custom">
+                    <label>اسم المستفيد</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="الاسم" />
+                    </div>
+                </div>
+                <!-- Account Number -->
+                <div class="form-group-custom">
+                    <label>رقم الحساب</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="الرقم" />
+                    </div>
+                </div>
+                <!-- IBAN Number -->
+                <div class="form-group-custom">
+                    <label>رقم الايبان</label>
+                    <div class="input-wrapper-custom">
+                        <input class="form-control" type="text" placeholder="الرقم" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-save-wrap mt-5">
+                <button class="btn btn-blue px-5 py-3 fz18">حفظ التعديلات</button>
+            </div>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Mark All as Read functionality
+        document.getElementById('markAllReadBtn').addEventListener('click', function () {
+            const unreadItems = document.querySelectorAll('.notification-item.unread');
+            unreadItems.forEach(function (item) {
+                item.classList.remove('unread');
+            });
+        });
+
+        // Individual notification click to mark as read
+        document.querySelectorAll('.notification-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                this.classList.remove('unread');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Teacher Dashboard - SpeakNest" name="description" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- Base Styles -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Extended Dashboard Styles -->
+    <link href="css/dashboard.css" rel="stylesheet" />
+    <title>Dashboard | SpeakNest</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-logo">
+            <a href="index-en.html">
+                <img src="images/logo.png" alt="SpeakNest Logo" />
+            </a>
+            <!-- MOBILE CLOSE BTN -->
+            <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index-en.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-en.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule-settings-en.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Schedule Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="classes-en.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Classes</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscriptions-en.html">
+                    <i class="fa-solid fa-rss"></i>
+                    <span>Manage Subscriptions</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet-en.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="reviews-en.html">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>Reviews List</span>
+                </a>
+            </li>
+            <li>
+                <a href="about-en.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="terms-en.html">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>Terms & Conditions</span>
+                </a>
+            </li>
+            <li>
+                <a href="privacy-en.html">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li>
+                <a href="faqs-en.html">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>FAQs</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact-en.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN WRAPPER ========== -->
+    <div class="dashboard-main">
+
+        <!-- ===== TOP BAR ===== -->
+        <header class="dashboard-topbar px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <button class="d-lg-none btn p-0 border-0 text-color fz24" id="sidebarToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <a href="wallet-en.html" class="topbar-wallet-btn text-decoration-none">
+                    <span class="d-none d-md-inline">Current Wallet Balance</span>
+                    <span class="amount">
+                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="topbar-user-area">
+                <a href="notifications-en.html" class="topbar-notification-btn me-2 me-md-3">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="dot"></span>
+                </a>
+                <a href="index.html" class="topbar-lang-toggle me-2 me-md-3 text-decoration-none">AR</a>
+
+                <!-- User Dropdown -->
+                <div class="dropdown-parent">
+                    <div class="topbar-user-profile cursor-pointer">
+                        <i class="fa-solid fa-chevron-down fz14 me-2 text-color opacity-50"></i>
+                        <span class="d-none d-lg-inline">Mr. Khaled Mohamed</span>
+                        <img src="images/teacher-avatar.png" alt="Mr. Khaled Mohamed" class="ms-2 ms-md-3" />
+                    </div>
+
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="user-profile-en.html">
+                                <i class="fa-solid fa-user"></i>
+                                User Profile
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="change-password-en.html">
+                                <i class="fa-solid fa-lock"></i>
+                                Change Password
+                            </a>
+                        </li>
+                        <hr class="red my-1">
+                        <li>
+                            <a href="logout-en.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="dashboard-content">
+
+            <!-- ---- Statistics Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">Statistics</div>
+
+                <div class="row g-4">
+                    <div class="col-md">
+                        <div class="stat-card-custom">
+                            <div class="label">Total Earnings</div>
+                            <div class="value">100 <i class="icon-saudi_riyal fz20"></i></div>
+                            <span class="stat-badge up"><i class="fa-solid fa-arrow-trend-up"></i> +12.5%</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="stat-card-custom">
+                            <div class="label">Due Amount</div>
+                            <div class="value">100 <i class="icon-saudi_riyal fz20"></i></div>
+                            <span class="stat-badge up"><i class="fa-solid fa-arrow-trend-up"></i> +12.5%</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="stat-card-custom">
+                            <div class="label">Active Subscriptions</div>
+                            <div class="value">15</div>
+                            <span class="stat-badge up"><i class="fa-solid fa-arrow-trend-up"></i> +12.5%</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="stat-card-custom">
+                            <div class="label">Booked Lessons</div>
+                            <div class="value">15</div>
+                            <span class="stat-badge down"><i class="fa-solid fa-arrow-trend-down"></i> -12.5%</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="stat-card-custom">
+                            <div class="label">Completed Lessons</div>
+                            <div class="value">15</div>
+                            <span class="stat-badge down"><i class="fa-solid fa-arrow-trend-down"></i> -12.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---- "Your Data" Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">Your Account</div>
+
+                <div class="data-card">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="data-header">
+                                <img src="images/teacher-avatar.png" alt="Profile avatar" class="data-avatar" />
+                                <div class="data-main-info">
+                                    <div class="d-flex align-items-md-baseline gap-md-4 gap-2 flex-column flex-md-row">
+                                        <h1 class="data-name mb-0">Mr. Khaled Mohamed</h1>
+                                        <div class="data-spec">
+                                            <i class="fa-light fa-briefcase"></i>
+                                            <span>Specialization Name</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-4 mt-4">
+                                        <div class="data-stat">
+                                            <span class="v">100</span>
+                                            <span class="l">Total Reviews</span>
+                                        </div>
+                                        <div class="data-stat">
+                                            <span class="v">4.6 <i class="fa-solid fa-star star fz14"></i></span>
+                                            <span class="l">Avg. Rating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <button class="data-btn w-100 copy-link-btn"
+                                        data-link="https://meet.google.com/abc-defg-hij">
+                                        Meeting Link
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="data-btn w-100 copy-link-btn"
+                                        data-link="https://speaknest.com/teacher/khaled-mohamed">
+                                        Teacher Profile Link
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="data-btn w-100 copy-link-btn" data-link="SpeakNest@2026">
+                                        Password
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="social-circle-row">
+                                        <a href="#" class="social-circle fb"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#" class="social-circle x"><i class="fa-brands fa-x-twitter"></i></a>
+                                        <a href="#" class="social-circle ig"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#" class="social-circle in"><i
+                                                class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---- Lessons Section ---- -->
+            <section class="mb-5">
+                <div class="section-title-dash">Today's Lessons</div>
+
+                <div class="lesson-card-item">
+                    <div class="lesson-card-grid">
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">Date</span>
+                                <span class="value">19/3/2026</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Time</span>
+                                <span class="value">9:00</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Student Name</span>
+                                <span class="value">Pardis Walid</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-sep-v"></div>
+
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">Subject</span>
+                                <span class="value">English Language</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Lesson #</span>
+                                <span class="value">#123</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Status</span>
+                                <span class="value">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-sep-h"></div>
+
+                    <div class="lesson-card-footer">
+                        <a href="class-details-en.html" class="footer-arrow">
+                            <span class="footer-label">Lesson Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lesson-card-item">
+                    <div class="lesson-card-grid">
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">Date</span>
+                                <span class="value">19/3/2026</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Time</span>
+                                <span class="value">10:00</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Student Name</span>
+                                <span class="value">Pardis Walid</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-sep-v"></div>
+
+                        <div class="lesson-card-col">
+                            <div class="lesson-item-row">
+                                <span class="label">Subject</span>
+                                <span class="value">English Language</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Lesson #</span>
+                                <span class="value">#124</span>
+                            </div>
+                            <div class="lesson-item-row">
+                                <span class="label">Status</span>
+                                <span class="value">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-sep-h"></div>
+
+                    <div class="lesson-card-footer">
+                        <a href="class-details-en.html" class="footer-arrow">
+                            <span class="footer-label">Lesson Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- ===== END CONTENT ===== -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
