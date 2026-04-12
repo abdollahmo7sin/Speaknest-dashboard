@@ -11,8 +11,6 @@
     <link href="css/all.min.css" rel="stylesheet" />
     <!-- Base Styles -->
     <link href="css/main.css" rel="stylesheet" />
-    <!-- Extended Dashboard Styles -->
-    <link href="css/dashboard.css" rel="stylesheet" />
     <title>Schedule | SpeakNest</title>
 </head>
 
@@ -119,7 +117,7 @@
                 <a href="wallet-en.html" class="topbar-wallet-btn text-decoration-none">
                     <span class="d-none d-md-inline">Current Wallet Balance</span>
                     <span class="amount">
-                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                        100 <i class="icon-saudi_riyal fz15"></i>
                     </span>
                 </a>
             </div>
@@ -201,33 +199,33 @@
 
                     <!-- Calendar Grid -->
                     <div class="calendar-grid">
-                        <div class="day-card">
+                        <div class="day-card" data-day="Saturday" data-date="Friday, April 10, 2026" data-status="available">
                             <span class="day-name">Sat</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="Sunday" data-date="Saturday, April 11, 2026" data-status="available">
                             <span class="day-name">Sun</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="Monday" data-date="Monday, April 12, 2026" data-status="available">
                             <span class="day-name">Mon</span>
                         </div>
-                        <div class="day-card status-unavailable">
+                        <div class="day-card status-unavailable" data-day="Tuesday" data-date="Tuesday, April 13, 2026" data-status="unavailable">
                             <span class="day-name">Tue</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="Wednesday" data-date="Wednesday, April 14, 2026" data-status="available">
                             <span class="day-name">Wed</span>
                         </div>
-                        <div class="day-card status-booked">
+                        <div class="day-card status-booked" data-day="Thursday" data-date="Thursday, April 15, 2026" data-status="booked">
                             <span class="day-name">Thu</span>
                             <span class="appt-id">#123 <i class="fa-solid fa-user-group fz12"></i></span>
                             <span class="appt-time">9:00 <i class="fa-solid fa-clock fz12"></i></span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="Friday" data-date="Friday, April 16, 2026" data-status="available">
                             <span class="day-name">Fri</span>
                         </div>
                     </div>
 
                     <!-- Legend -->
-                    <div class="calendar-legend">
+                    <div class="calendar-legend overflow-hidden">
                         <div class="legend-item">
                             <span class="legend-circle available"></span>
                             <span>Available</span>
@@ -239,6 +237,33 @@
                         <div class="legend-item">
                             <span class="legend-circle unavailable"></span>
                             <span>Unavailable</span>
+                        </div>
+                    </div>
+
+                    <!-- Day Detail Panel (opens on day-card click) -->
+                    <div class="day-detail-panel" id="dayDetailPanel">
+                        <div class="day-detail-header mb-3">
+                            <div class="section-title-dash mb-0 fz20">
+                                Manage Day <i class="fa-solid fa-sliders ms-2 fz18 text-red"></i>
+                            </div>
+                            <button class="day-detail-close" id="dayDetailClose" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <div class="day-detail-card-inner">
+                            <div class="d-flex align-items-center gap-2 mb-4">
+                                <div class="day-detail-nav-btn cursor-default">
+                                    <i class="fa-solid fa-calendar-days text-red"></i>
+                                </div>
+                                <span class="day-detail-title" id="dayDetailTitle">Friday, April 10, 2026</span>
+                            </div>
+
+                            <div class="day-slots-list-container">
+                                <div class="day-slots-list" id="daySlotsContainer">
+                                    <!-- Slot rows rendered by JS -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,6 +279,82 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        (function () {
+            // -- Data per day (in a real app this comes from an API) --
+            const dayData = {
+                'Saturday':  { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM', '10:00 AM - 11:00 AM', '11:00 AM - 12:00 PM', '12:00 PM - 1:00 PM', '1:00 PM - 2:00 PM', '2:00 PM - 3:00 PM', '3:00 PM - 4:00 PM', '4:00 PM - 5:00 PM', '5:00 PM - 6:00 PM'], hasBooking: false },
+                'Sunday':    { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM', '10:00 AM - 11:00 AM'], hasBooking: false },
+                'Monday':    { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM', '10:10 AM - 11:00 AM'], hasBooking: false },
+                'Tuesday':   { slots: [], hasBooking: false },
+                'Wednesday': { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM', '10:00 AM - 11:00 AM'], hasBooking: false },
+                'Thursday':  { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM (#123)', '10:00 AM - 11:00 AM'], hasBooking: true },
+                'Friday':    { slots: ['8:00 AM - 9:00 AM', '9:00 AM - 10:00 AM', '10:00 AM - 11:00 AM'], hasBooking: false },
+            };
+
+            const panel = document.getElementById('dayDetailPanel');
+            const titleEl = document.getElementById('dayDetailTitle');
+            const container = document.getElementById('daySlotsContainer');
+            const closeBtn = document.getElementById('dayDetailClose');
+            let activeCard = null;
+
+            function buildSlots(day) {
+                const data = dayData[day] || { slots: [] };
+                container.innerHTML = '';
+
+                data.slots.forEach((slot, i) => {
+                    const row = document.createElement('div');
+                    row.className = 'day-slot-row';
+                    const hasAppt = slot.includes('(#');
+                    row.innerHTML = `
+                        <span class="slot-time">${slot.replace(/ \(#\d+\)/, '')}</span>
+                        ${hasAppt ? '<span class="slot-booked-badge"><i class="fa-solid fa-user-group"></i> Booked</span>' : ''}
+                        <label class="sched-toggle">
+                            <input type="checkbox" class="slot-checkbox" ${hasAppt ? '' : 'checked'}>
+                            <span class="sched-slider"></span>
+                        </label>
+                    `;
+                    container.appendChild(row);
+                });
+
+                if (data.slots.length === 0) {
+                    container.innerHTML = '<p class="text-center text-muted py-3 fz15">No time slots available for this day.</p>';
+                }
+            }
+
+            document.querySelectorAll('.day-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    const day = card.dataset.day;
+                    const date = card.dataset.date;
+
+                    if (activeCard === card && panel.classList.contains('open')) {
+                        panel.classList.remove('open');
+                        card.classList.remove('day-card--active');
+                        activeCard = null;
+                        return;
+                    }
+
+                    if (activeCard) activeCard.classList.remove('day-card--active');
+                    activeCard = card;
+                    card.classList.add('day-card--active');
+
+                    titleEl.textContent = date;
+                    buildSlots(day);
+
+                    panel.classList.add('open');
+                    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+                });
+            });
+
+            closeBtn.addEventListener('click', function () {
+                panel.classList.remove('open');
+                if (activeCard) activeCard.classList.remove('day-card--active');
+                activeCard = null;
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
+

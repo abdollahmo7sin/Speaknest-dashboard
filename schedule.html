@@ -11,8 +11,6 @@
     <link href="css/all.min.css" rel="stylesheet" />
     <!-- Base Styles (main.css contains design variables) -->
     <link href="css/main.css" rel="stylesheet" />
-    <!-- Extended Dashboard Styles -->
-    <link href="css/dashboard.css" rel="stylesheet" />
     <title>جدول المواعيد | SpeakNest</title>
 </head>
 
@@ -119,7 +117,7 @@
                 <a href="wallet.html" class="topbar-wallet-btn text-decoration-none">
                     <span class="d-none d-md-inline">رصيد المحفظة الحالي</span>
                     <span class="amount">
-                        100 <i class="icon-saudi_riyal" style="font-size: 15px;"></i>
+                        100 <i class="icon-saudi_riyal fz15"></i>
                     </span>
                 </a>
             </div>
@@ -203,31 +201,35 @@
 
                     <!-- Calendar Grid -->
                     <div class="calendar-grid">
-                        <div class="day-card">
+                        <div class="day-card" data-day="السبت" data-date="الجمعة 10 أبريل 2026" data-status="available">
                             <span class="day-name">السبت</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="الأحد" data-date="السبت 11 أبريل 2026" data-status="available">
                             <span class="day-name">الأحد</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="الإثنين" data-date="الإثنين 12 أبريل 2026"
+                            data-status="available">
                             <span class="day-name">الإثنين</span>
                         </div>
-                        <div class="day-card status-unavailable">
+                        <div class="day-card status-unavailable" data-day="الثلاثاء" data-date="الثلاثاء 13 أبريل 2026"
+                            data-status="unavailable">
                             <span class="day-name">الثلاثاء</span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="الأربعاء" data-date="الأربعاء 14 أبريل 2026"
+                            data-status="available">
                             <span class="day-name">الأربعاء</span>
                         </div>
-                        <div class="day-card status-booked">
+                        <div class="day-card status-booked" data-day="الخميس" data-date="الخميس 15 أبريل 2026"
+                            data-status="booked">
                             <span class="day-name">الخميس</span>
                             <span class="appt-id">#123 <i class="fa-solid fa-user-group fz12"></i></span>
                             <span class="appt-time">9:00 <i class="fa-solid fa-clock fz12"></i></span>
                         </div>
-                        <div class="day-card">
+                        <div class="day-card" data-day="الجمعة" data-date="الجمعة 16 أبريل 2026"
+                            data-status="available">
                             <span class="day-name">الجمعة</span>
                         </div>
                     </div>
-
                     <!-- Legend -->
                     <div class="calendar-legend">
                         <div class="legend-item">
@@ -243,6 +245,35 @@
                             <span>غير متاح</span>
                         </div>
                     </div>
+                    <!-- Day Detail Panel (opens on day-card click) -->
+                    <div class="day-detail-panel" id="dayDetailPanel">
+                        <div class="day-detail-header mb-3">
+                            <div class="section-title-dash mb-0 fz20">
+                                إدارة اليوم <i class="fa-solid fa-sliders ms-2 fz18 text-red"></i>
+                            </div>
+                            <button class="day-detail-close" id="dayDetailClose" aria-label="إغلاق">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <div class="day-detail-card-inner">
+                            <div class="d-flex align-items-center gap-2  mb-4">
+                                <div class="day-detail-nav-btn cursor-default">
+                                    <i class="fa-solid fa-calendar-days text-red"></i>
+                                </div>
+                                <span class="day-detail-title" id="dayDetailTitle">الجمعة 10 أبريل 2026</span>
+
+                            </div>
+
+                            <div class="day-slots-list-container">
+                                <div class="day-slots-list" id="daySlotsContainer">
+                                    <!-- Slot rows rendered by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
 
@@ -255,6 +286,90 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        (function () {
+            // -- Data per day (in a real app this comes from an API) --
+            const dayData = {
+                'السبت': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص', '10:00 ص - 11:00 ص', '11:00 ص - 12:00 م', '12:00 م - 1:00 م', '1:00 م - 2:00 م', '2:00 م - 3:00 م', '3:00 م - 4:00 م', '4:00 م - 5:00 م', '5:00 م - 6:00 م', '6:00 م - 7:00 م', '7:00 م - 8:00 م', '8:00 م - 9:00 م', '9:00 م - 10:00 م', '10:00 م - 11:00 م', '11:00 م - 12:00 م'], hasBooking: false },
+                'الأحد': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص', '10:00 ص - 11:00 ص'], hasBooking: false },
+                'الإثنين': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص', '10:00 ص - 11:00 ص', '11:00 ص - 12:00 م'], hasBooking: false },
+                'الثلاثاء': { slots: [], hasBooking: false },
+                'الأربعاء': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص', '10:00 ص - 11:00 ص', '11:00 ص - 12:00 م'], hasBooking: false },
+                'الخميس': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص (#123)', '10:00 ص - 11:00 ص', '11:00 ص - 12:00 م'], hasBooking: true },
+                'الجمعة': { slots: ['8:00 ص - 9:00 ص', '9:00 ص - 10:00 ص', '10:00 ص - 11:00 ص', '11:00 ص - 12:00 م'], hasBooking: false },
+            };
+
+            const panel = document.getElementById('dayDetailPanel');
+            const titleEl = document.getElementById('dayDetailTitle');
+            const badgeEl = document.getElementById('dayDetailBadge');
+            const container = document.getElementById('daySlotsContainer');
+            const closeBtn = document.getElementById('dayDetailClose');
+            let activeCard = null;
+
+            function buildSlots(day) {
+                const data = dayData[day] || { slots: [], hasBooking: false };
+                container.innerHTML = '';
+
+                data.slots.forEach((slot, i) => {
+                    const row = document.createElement('div');
+                    row.className = 'day-slot-row';
+                    const hasAppt = slot.includes('(#');
+                    row.innerHTML = `
+                    <span class="slot-time">${slot.replace(/ \(#\d+\)/, '')}</span>
+                    ${hasAppt ? '<span class="slot-booked-badge"><i class="fa-solid fa-user-group"></i> محجوز</span>' : ''}
+                    <label class="sched-toggle">
+                        <input type="checkbox" class="slot-checkbox" ${hasAppt ? '' : 'checked'}>
+                        <span class="sched-slider"></span>
+                    </label>
+                `;
+                    container.appendChild(row);
+                });
+
+                if (data.slots.length === 0) {
+                    container.innerHTML = '<p class="text-center text-muted py-3 fz15">لا توجد مواعيد متاحة لهذا اليوم.</p>';
+                }
+            }
+
+
+
+            document.querySelectorAll('.day-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    const day = card.dataset.day;
+                    const date = card.dataset.date;
+                    const status = card.dataset.status;
+
+                    if (activeCard === card && panel.classList.contains('open')) {
+                        // Toggle off same card
+                        panel.classList.remove('open');
+                        card.classList.remove('day-card--active');
+                        activeCard = null;
+                        return;
+                    }
+
+                    // Deactivate previous
+                    if (activeCard) activeCard.classList.remove('day-card--active');
+                    activeCard = card;
+                    card.classList.add('day-card--active');
+
+                    // Update content
+                    titleEl.textContent = date;
+                    buildSlots(day);
+
+                    // Show panel
+                    panel.classList.add('open');
+                    // Smooth scroll into view
+                    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+                });
+            });
+
+            closeBtn.addEventListener('click', function () {
+                panel.classList.remove('open');
+                if (activeCard) activeCard.classList.remove('day-card--active');
+                activeCard = null;
+            });
+        })();
+    </script>
 
 </body>
 
